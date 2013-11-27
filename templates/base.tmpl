@@ -20,7 +20,9 @@ ${set_locale(lang)}
             </h1>
             <hr>
             <%block name="belowtitle">
-                <p> ${description}</p>
+                %if description:
+                    <p> ${description}</p>
+                %endif
                 %if len(translations) > 1:
                 <small>
                     ${(messages("Also available in"))}:&nbsp;
