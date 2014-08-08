@@ -159,7 +159,7 @@ nav hr {
 }
 
 nav li {
-    display: table-caption;
+    display: table;
     margin: 10px;
 }
 

@@ -68,6 +68,7 @@
 </%def>
 
 <%def name="html_navigation_links()">
+    <ul>
     %for url, text in navigation_links[lang]:
         % if isinstance(url, tuple):
             <li> ${text}
@@ -82,13 +83,10 @@
             </ul>
             </li>
         % else:
-            % if rel_link(permalink, url) == "#":
-                <li class="active"><a href="${url}">${text}</a></li>
-            %else:
-                <li><a href="${url}">${text}</a></li>
-            %endif
+            <li> <a href="${url}"> ${text} </a> </li>
         % endif
     %endfor
+    </ul>
 </%def>
 
 <%def name="html_translations()">
